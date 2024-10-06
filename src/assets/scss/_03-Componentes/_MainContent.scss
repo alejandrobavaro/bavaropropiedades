@@ -1,0 +1,36 @@
+//---------contenedor principal--------------------//
+
+.mainContent {
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border-bottom: 2px solid #00f7ff7c;
+  border-radius: 30px;
+}
+
+//---------contenedor principal de los elementos--------------------//
+
+.mainContentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre elementos */
+  width: 100%;
+  max-width: 1200px; /* Ajusta según sea necesario */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+//---------items del grid--------------------//
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Agrega una sombra para mejorar la visualización */
+}
+

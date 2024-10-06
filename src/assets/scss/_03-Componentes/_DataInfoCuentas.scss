@@ -1,0 +1,202 @@
+// Estilos generales para DataInfoCuentas
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0px 40px rgba(255, 255, 255, 0.658);
+
+  .data-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // Mostrar dos tarjetas por fila en pantallas grandes
+    }
+  }
+
+  .data-item {
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgb(0, 238, 255);
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Se asegura que las tablas ocupen todo el ancho disponible
+
+    h3 {
+      font-size: large;
+      color: #00fbff;
+      margin-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: small;
+      overflow-x: auto; // Permite scroll si la tabla es muy ancha
+
+      td {
+        padding: 2px 4px;
+        border: 1px solid #1c4747;
+        color: #fff;
+      }
+    }
+
+    a {
+      color: #00fbff;
+      text-decoration: none;
+      display: block;
+      margin-top: 5px;
+      border: 1px solid #00fbff;
+      padding: 2px 4px;
+      border-radius: 3px;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #138b8d4b;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// Estilos para la barra de búsqueda y filtros
+.search-filter-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 5px;
+  padding: 10px 50px;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 10px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  // Fila superior: botones de categoría
+
+  // Fila inferior: filtros
+
+  .filters {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+
+    select {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: small;
+      margin-left: 10px;
+      transition: border-color 0.3s;
+
+      &:hover,
+      &:focus {
+        border-color: #00fbff;
+        outline: none;
+      }
+    }
+  }
+}
+
+.filter-field-select {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 5px 5px;
+  box-shadow: 0 2px 4px rgb(0, 238, 255);
+}
+
+// Estilos para la barra de búsqueda
+.search-bar {
+  padding: 0px;
+  background-color: #218a81;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0, 238, 255);
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    font-size: small;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+  }
+}
+
+.category-buttons {
+  grid-column: span 4;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  border-radius: 20px;
+  padding: 5px;
+
+  button {
+    background-color: #246e6e62;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 3px 5px;
+    font-size: medium;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 2px; // Añadir margen para evitar desbordamiento
+
+    &:hover,
+    &.selected {
+      background-color: #00fbff;
+      color: #333;
+    }
+  }
+}
+
+// Media Queries para dispositivos tablet y móviles
+@media (max-width: 768px) {
+  .data-container {
+    grid-template-columns: 1fr; // Una tarjeta por fila en tabletas
+  }
+}
+
+@media (max-width: 480px) {
+  .data-container {
+    grid-template-columns: 1fr; // Una tarjeta por fila en móviles
+  }
+}

@@ -1,0 +1,431 @@
+//---------Header Container--------------------//
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; // Ajusta el padding para mayor espacio
+  font-size: small;
+  border-bottom: 2px solid #a76c00b6;
+  border-radius: 30px;
+  box-sizing: border-box; // Asegura que el padding no afecte el ancho total
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px; // Ajusta el padding en móviles
+  }
+}
+
+//---------Logo Header--------------------//
+
+.logoHeader {
+  max-width: 150px; // Ajusta el tamaño máximo del logo
+  height: auto; // Mantiene la proporción del logo
+  transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    max-width: 100px; // Tamaño del logo en pantallas pequeñas
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+//---------Date Container--------------------//
+
+.date-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: x-small;
+  color: white;
+  white-space: nowrap; // Evita el salto de línea dentro del contenedor
+  text-align: center;
+}
+
+.date-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Centra el contenido horizontalmente
+  gap: 5px; // Espacio entre filas
+}
+
+.time-row, .weekday-row, .date-row {
+  display: block; // Asegura que cada fila esté en una línea separada
+}
+
+.current-time {
+  font-size: x-small;
+  color: #00fff2;
+}
+
+.dia{
+  color: #00ddff;
+}
+
+.numeroFecha {
+  font-size: xx-small;
+  text-transform: uppercase;
+  color: #00ffcc;
+}
+
+
+//---------Auth Buttons--------------------//
+
+.auth-icon {
+  font-size: x-large;
+  color: #00ffea;
+  transition: color 0.3s ease;
+  margin: 0;
+
+  &:hover {
+    color: #ff5e00;
+  }
+}
+
+.auth-welcome {
+  display: flex;
+  align-items: center;
+  font-size: x-small;
+  color: #ffffff;
+  margin-bottom: 5px;
+
+
+  span {
+    margin-right: 5px; // Espacio entre "Hola" y el nombre de usuario
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+}
+
+
+
+
+//-------------------------//
+.iconoCalculadora{
+  color: rgba(255, 255, 255, 0.692);
+  font-size: x-large;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #00ffb3;
+  }
+}
+
+.iconoTemporizador {
+  color: rgba(255, 255, 255, 0.692);
+  font-size: x-large;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #00ffb3;
+  }
+}
+
+
+
+//---------Navbar Header--------------------//
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Estilos para .navbar-nav
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 38px; // Gap por defecto para pantallas grandes
+
+  // Media queries para dispositivos móviles y tablets
+  @media (max-width: 768px) {
+    gap: 3px; // Gap para pantallas de tablet y móviles
+  }
+}
+
+
+.navbarHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navbar-navHeader {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+//---------home y BOTONES--------------------//
+
+.nav-linkHeader.home-link {
+  text-align: center;
+  color: #bbffe9;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(255, 0, 217, 0.591);
+  }
+}
+
+.textoMenu1 {
+  font-size: small;
+  color: #c8fcffe9;
+
+  &:hover {
+    color: #7de0f4;
+  }
+}
+
+// Estilos generales para los enlaces de navegación
+.nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #ffffff; // Color del texto de los enlaces
+
+  &:hover {
+    color: #00f7ff; // Color del texto en hover
+  }
+}
+
+// Estilos específicos para el botón HOME
+.home-link {
+  color: #1abc9c; // Color turquesa
+
+  &:hover {
+    color: #00ff88; // Color del texto en hover
+  }
+}
+
+// Estilos específicos para el botón NOTAS
+.notas-link {
+  color: #1abc9c; // Color turquesa
+  font-size: small;
+
+  &:hover {
+    color: #00ff88; // Color del texto en hover
+  }
+}
+
+// Estilos específicos para el botón CONTACTO
+.contacto-link {
+
+}
+
+// Estilos específicos para el botón TAREAS EN PROCESO
+.tareas-link {
+  color: #1abc9c; // Color turquesa
+  font-size: small;
+
+  &:hover {
+    color: #00ff88; // Color del texto en hover
+  }
+}
+
+//---------Contacto--------------------//
+
+.nav-linkHeader {
+  text-align: center;
+  color: #bbffe9;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(255, 0, 217, 0.591);
+  }
+}
+
+.textoMenuTareas {
+  color: #d5dfff;
+
+  &:hover {
+    color: #52cce7;
+  }
+}
+
+.textoMenu {
+  color: #ffffff;
+
+  &:hover {
+    color: #52cce7;
+  }
+}
+
+.textoMenu2 {
+  font-size: small;
+  color: #ffffff;
+}
+
+//---------Navbar Toggler (Hamburguesa)--------------------//
+.navbar-togglerHeader {
+  border: none;
+  background-color: white;
+  color: white;
+  font-size: xx-large;
+  cursor: pointer;
+  
+  
+
+  @media (min-width: 769px) {
+    display: none;
+    
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+//---------Menu Hamburguesa--------------------//
+
+.menuCompleto {
+  display: none;
+  
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+  }
+
+  &.open {
+    display: flex;
+    
+  }
+}
+
+.mobile-menu {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  &.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+//---------Notificaciones--------------------//
+
+.headerNotificaciones {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: small;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #bbd0cd;
+  }
+}
+
+
+.notifications-item {
+  color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 768px) {
+
+  }
+}
+
+
+
+//---------Elementos de NavBar--------------------//
+
+.navbar-togglerHeader {
+  border: none;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: xx-large;
+  cursor: pointer;
+  
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+// Estilos para el botón de modo claro/oscuro
+.dark-mode-toggle {
+  padding: 0;
+  margin: 0;
+
+
+  // Mostrar solo en pantallas grandes
+  @media (max-width: 768px) {
+    display: none; // Oculta en tabletas y móviles
+  }
+}
+
+
+.dark-mode-toggle {
+  font-size: large;
+}
