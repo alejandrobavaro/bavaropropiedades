@@ -1,36 +1,39 @@
 //---------contenedor principal--------------------//
-
 .mainContent {
   width: 100%;
-  background-color: transparent;
-  padding: 10px;
-  border-bottom: 2px solid #00f7ff7c;
-  border-radius: 30px;
+  background-color: #4c1a1a; /* Fondo bordó */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
 }
 
 //---------contenedor principal de los elementos--------------------//
-
 .mainContentContainer {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 20px; /* Espacio entre elementos */
+  gap: 30px; /* Espacio entre elementos */
   width: 100%;
-  max-width: 1200px; /* Ajusta según sea necesario */
-  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
+  background-color: #330d0d; /* Fondo bordó más oscuro */
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 //---------items del grid--------------------//
-
 .gridItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Agrega una sombra para mejorar la visualización */
-}
+  background-color: #5a2323; /* Otro tono de bordó */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
+  h2 {
+    color: #f9d342; /* Color dorado */
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

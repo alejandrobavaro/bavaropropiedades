@@ -1,22 +1,22 @@
-.rentas-info-extra {
+.propiedades-en-alquiler {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.568);
   padding: 10px;
   border-radius: 20px;
-  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 20px rgb(255, 217, 0);
 
-  .filter-buttons {
+  .filter-buttons-alquiler {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 10px;
 
     button {
-      background-color: #246e6e62;
+      background-color: #6e5024a8;
       border: 1px solid transparent;
       border-radius: 8px;
       padding: 3px 5px;
@@ -27,14 +27,14 @@
 
       &.selected,
       &:hover {
-        background-color: #00fbff;
+        background-color: #a06904;
         color: #333;
         transform: scale(1.05);
       }
     }
   }
 
-  .data-container {
+  .data-container-alquiler {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -42,15 +42,15 @@
     max-width: 1200px;
 
     @media (min-width: 769px) {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  .data-item {
+  .data-item-alquiler {
     color: #fff;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 2px 40px rgba(255, 187, 0, 0.788);
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -58,14 +58,12 @@
     background-color: transparent;
     transition: transform 0.3s ease;
 
-
-
     h3 {
       font-size: medium;
       background-color: #00000050;
       color: #ffffff;
       margin-bottom: 5px;
-      border: 1px solid #00ffff;
+      border: 1px solid #ffd000;
       border-radius: 10%;
       padding: 2px;
     }
@@ -77,17 +75,17 @@
 
       td {
         padding: 5px 8px;
-        border: 1px solid #1c4747;
+        border: 1px solid #584917;
         color: #fff;
       }
 
       td:first-child {
-        color: #00ffdd;
+        color: #ffbb00;
         font-weight: 100;
       }
     }
 
-    .image-thumbnails {
+    .image-thumbnails-en-alquiler {
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -108,7 +106,7 @@
           transition: color 0.3s ease;
 
           &:hover {
-            color: #00fbff;
+            color: #fffb00;
           }
         }
 
@@ -139,9 +137,9 @@
       width: 90%;
       height: 90%;
       background: white;
-      border: 1px solid #00fbff;
+      border: 1px solid #ffbb00;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      box-shadow: 0 0 20px rgba(255, 187, 0, 0.6);
     }
 
     button {
@@ -158,15 +156,13 @@
       justify-content: center;
 
       &:hover {
-        color: #00e1ff;
+        color: #ffd000;
       }
     }
   }
 }
 
-
-
-.share-buttons {
+.share-buttons-en-alquiler {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
@@ -178,16 +174,17 @@
     background: none;
     border: none;
     cursor: pointer;
+    color: #ffffff;
+    font-size: large;
 
     &:hover {
-      background-color: #00e1ff;
+      color: #ffd398;
     }
 
     h6 {
       margin-top: 5px;
       font-size: large;
-      color: #555;
-
-      
+      color: #ffffff;
     }
-  }  }
+  }
+}

@@ -1,3 +1,9 @@
+// Variables de colores
+$background-color: #4b0e18; // Bordó
+$gold-color: #ffd700; // Dorado
+$white-color: #ffffff;
+$border-radius: 30px;
+
 //---------gridPadreContacto2--------------------//
 
 .gridPadreContacto2 {
@@ -8,8 +14,8 @@
   margin: 0 auto;
   max-width: 1050px;
   padding: 10px;
-  border-bottom: 2px solid #00f7ff7c;
-  border-radius: 30px;
+  border-bottom: 2px solid rgba($gold-color, 0.5); // Borde dorado translúcido
+  border-radius: $border-radius;
 
   // Modo tablet y móvil
   @media (max-width: 768px) {
@@ -31,15 +37,15 @@
 
   // Estilo para el contenedor con sombra
   .box-shadow {
-    box-shadow: 0 0px 16px rgba(255, 255, 255, 0.487);
-    border-radius: 30px;
+    box-shadow: 0 0px 16px rgba($gold-color, 0.5); // Sombra dorada suave
+    border-radius: $border-radius;
     padding: 20px;
-    background-color: #00000029;
+    background-color: rgba(0, 0, 0, 0.2); // Fondo oscuro translúcido
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .box-shadow:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.356);
+    box-shadow: 0 0 20px rgba($gold-color, 0.7); // Sombra dorada más intensa al hacer hover
   }
 
   // Estilos para las columnas del formulario y el slider
@@ -85,7 +91,7 @@
       display: block;
       margin-bottom: 0.5rem;
       font-weight: bold;
-      color: #ffffff;
+      color: $white-color;
     }
 
     input,
@@ -98,8 +104,8 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
       &:focus {
-        border-color: #ffffff;
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.356);
+        border-color: $white-color;
+        box-shadow: 0 0 40px rgba($gold-color, 0.5); // Sombra dorada al enfocar
         outline: none;
       }
     }
@@ -114,8 +120,8 @@
     text-align: right;
 
     .btn-submit {
-      background-color: #7b5510;
-      color: #fff;
+      background-color: #7b5510; // Color marrón oscuro
+      color: $white-color;
       border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 10px;
@@ -125,7 +131,7 @@
       transition: background-color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        background-color: #a57c1c;
+        background-color: #a57c1c; // Dorado oscuro en hover
         transform: scale(1.05);
       }
     }
@@ -140,13 +146,13 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
-    color: #ffbb00;
+    color: $gold-color; // Color dorado
     position: relative;
     z-index: 1;
 
     i {
       font-size: 1.5rem;
-      color: #ffb300;
+      color: $gold-color;
       margin: 0 0.5rem;
     }
   }
@@ -169,19 +175,18 @@
   }
 }
 
-// Estilos para la clase gifTamaño
+//---------gifTamaño--------------------//
+
 .gifTamaño {
   width: 100%; // Asegura que el ancho sea del 100% del contenedor
 
   // Ajustes específicos para tablets
   @media (max-width: 1024px) {
-    width: 70%; // Asegura que el ancho se mantenga al 100% en tablets
-   
+    width: 70%; // Reduce el ancho en tablets
   }
 
   // Ajustes específicos para móviles
   @media (max-width: 768px) {
-    width: 70%; // Asegura que el ancho se mantenga al 100% en móviles
-   
+    width: 70%; // Reduce el ancho en móviles
   }
 }

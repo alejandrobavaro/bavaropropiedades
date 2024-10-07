@@ -52,7 +52,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         <Container>
           <Navbar.Brand as={Link} to="/" className="logo-container">
             <img
-              src="../../public/img/02-logos/logobavaropropiedades3.png"
+              src="/img/02-logos/logobavaropropiedades3.png"
               alt="Logo"
               className="logoHeader"
             />
@@ -87,34 +87,19 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
               <Nav.Link
                 className="nav-link"
                 as={Link}
-                to="/data"
+                to="/en-alquiler"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Info Cuentas
+               ALQUILER
               </Nav.Link>
+           
               <Nav.Link
                 className="nav-link"
                 as={Link}
-                to="/alquileres"
+                to="/en-venta"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Alquileres
-              </Nav.Link>
-              <Nav.Link
-                className="nav-link"
-                as={Link}
-                to="/rentas-cobranza"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Cobranza
-              </Nav.Link>
-              <Nav.Link
-                className="nav-link"
-                as={Link}
-                to="/rentas-info-extra"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Info Extra
+                VENTA
               </Nav.Link>
               <Nav.Link
                 className="nav-link"

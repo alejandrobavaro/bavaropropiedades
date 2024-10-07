@@ -7,8 +7,10 @@ function MainContent() {
       <div className="gridPadre"></div>
 
       <div className="gridItem">
-        {/* Eliminar GastosPorPagar si no se necesita */}
-        {/* <GastosPorPagar /> */}
+    
+
+
+    
       </div>
     </main>
   );

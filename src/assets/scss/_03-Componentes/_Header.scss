@@ -60,17 +60,17 @@
 
 .current-time {
   font-size: x-small;
-  color: #00fff2;
+  color: #ffd900;
 }
 
 .dia{
-  color: #00ddff;
+  color:  #ffd900;
 }
 
 .numeroFecha {
   font-size: xx-small;
   text-transform: uppercase;
-  color: #00ffcc;
+  color: #ffd900;
 }
 
 
@@ -78,7 +78,7 @@
 
 .auth-icon {
   font-size: x-large;
-  color: #00ffea;
+  color:  #ffd900;
   transition: color 0.3s ease;
   margin: 0;
 
@@ -120,7 +120,7 @@
   transition: color 0.3s ease;
 
   &:hover {
-    color: #00ffb3;
+    color: #ffd900;
   }
 }
 
@@ -130,7 +130,7 @@
   transition: color 0.3s ease;
 
   &:hover {
-    color: #00ffb3;
+    color: #ffd900;
   }
 }
 
@@ -186,7 +186,7 @@
   text-decoration: none;
 
   &:hover {
-    color: rgba(255, 0, 217, 0.591);
+    color:  #ffd900;
   }
 }
 
@@ -195,7 +195,7 @@
   color: #c8fcffe9;
 
   &:hover {
-    color: #7de0f4;
+    color:  #ffd900;
   }
 }
 
@@ -207,7 +207,7 @@
   color: #ffffff; // Color del texto de los enlaces
 
   &:hover {
-    color: #00f7ff; // Color del texto en hover
+    color:  #ffd900;
   }
 }
 
@@ -216,7 +216,7 @@
   color: #1abc9c; // Color turquesa
 
   &:hover {
-    color: #00ff88; // Color del texto en hover
+    color:  #ffd900;
   }
 }
 
@@ -226,7 +226,7 @@
   font-size: small;
 
   &:hover {
-    color: #00ff88; // Color del texto en hover
+    color:  #ffd900;
   }
 }
 
@@ -237,11 +237,11 @@
 
 // Estilos específicos para el botón TAREAS EN PROCESO
 .tareas-link {
-  color: #1abc9c; // Color turquesa
+  color: #ffd900;
   font-size: small;
 
   &:hover {
-    color: #00ff88; // Color del texto en hover
+    color:  #ffd900;
   }
 }
 
@@ -253,7 +253,7 @@
   text-decoration: none;
 
   &:hover {
-    color: rgba(255, 0, 217, 0.591);
+    color:  #ffd900;
   }
 }
 
@@ -261,7 +261,7 @@
   color: #d5dfff;
 
   &:hover {
-    color: #52cce7;
+    color:  #ffd900;
   }
 }
 
@@ -269,7 +269,7 @@
   color: #ffffff;
 
   &:hover {
-    color: #52cce7;
+    color: #ffd900;
   }
 }
 

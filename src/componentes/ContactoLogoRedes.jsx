@@ -1,10 +1,9 @@
-import React from "react"; // Importa React
+import React from "react";
 import "../assets/scss/_03-Componentes/_ContactoLogoRedes.scss";
 
-// Componente ContactoLogoRedes
 const ContactoLogoRedes = () => {
   return (
-    <div>
+    <div className="contact-logo-redes-wrapper">
       <div className="gridPadreContacto1">
         <div className="contact-logo-rede-container">
           <div className="logo-column">
@@ -12,52 +11,9 @@ const ContactoLogoRedes = () => {
               <img
                 alt="icono"
                 className="logo-img logo-main"
-                src="/img/02-logos/logomisgastos1.png"
+                src="/img/02-logos/logobavaropropiedades3.png"
               />
             </a>
-            {/* <div className="logo-secondary-container">
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/2.png"
-                />
-              </a>
-
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logoPuchulita"
-                  src="/img/05-img-costados-larga/0a.png"
-                />
-              </a>
-
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/4.png"
-                />
-              </a>
-            </div> */}
-{/* 
-            <div className="logo-secondary-container">
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/1a.png"
-                />
-              </a>
-
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/3.png"
-                />
-              </a>
-            </div> */}
 
             <div className="logo-secondary-container">
               <a href="#">
@@ -77,7 +33,7 @@ const ContactoLogoRedes = () => {
               </a>
             </div>
           </div>
-          {/* Columna de iconos de contacto */}
+
           <div className="contact-icons">
             <div className="contact-item">
               <a
@@ -121,7 +77,7 @@ const ContactoLogoRedes = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-person-arms-up" /> Escríbenos un mail <i className="bi bi-envelope" />
+                <i className="bi bi-envelope" /> Escríbenos un mail
               </a>
             </div>
             <div className="contact-item">
@@ -130,7 +86,7 @@ const ContactoLogoRedes = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-paypal" /> COLABORÁ CON NOSOTROS
+                <i className="bi bi-paypal" /> Colaborá con nosotros
               </a>
             </div>
             <div className="contact-item">
@@ -139,7 +95,7 @@ const ContactoLogoRedes = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-yt" /> Ver Videos
+                <i className="bi bi-play-circle" /> Ver videos
               </a>
             </div>
           </div>
@@ -150,4 +106,4 @@ const ContactoLogoRedes = () => {
   );
 };
 
-export default ContactoLogoRedes; 
+export default ContactoLogoRedes;

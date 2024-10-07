@@ -26,13 +26,9 @@ import Footer from "./componentes/Footer";
 import ContactoLogoRedes from "./componentes/ContactoLogoRedes";
 import ContactoFormularioSlider from "./componentes/ContactoFormularioSlider";
 
-//-----------RENTAS--------------//
-import RentasAlquileres from "./componentes/RentasAlquileres";
-import RentasCobranza from "./componentes/RentasCobranza";
-import RentasInfoExtra from "./componentes/RentasInfoExtra";
-
-//-----------DATA------------//
-import DataInfoCuentas from "./componentes/DataInfoCuentas";
+//--------------PROPIEDADES---------------//
+import PropiedadesEnVenta from "./componentes/PropiedadesEnVenta";
+import PropiedadesEnAlquiler from "./componentes/PropiedadesEnAlquiler";
 
 //-----------LOGIN-LOGOUT-REGISTRO-----------------//
 import { AuthProvider, useAuth } from "./componentes/SesionAuthContext";
@@ -57,10 +53,7 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  useEffect(() => {
-    // Aplica la clase correspondiente al <body>
-    document.body.className = isDarkMode ? "dark-mode" : "light-mode";
-  }, [isDarkMode]);
+
 
   return (
     <AuthProvider>
@@ -90,25 +83,20 @@ function App() {
                     />
                   }
                 />
-                <Route
-                  path="/data"
-                  element={<ProtectedRoute element={<DataInfoCuentas />} />}
-                />
+             
                 <Route
                   path="/ayuda"
                   element={<ProtectedRoute element={<ConsultasAyuda />} />}
                 />
+
                 <Route
-                  path="/alquileres"
-                  element={<ProtectedRoute element={<RentasAlquileres />} />}
+                  path="/en-alquiler"
+                  element={<ProtectedRoute element={<PropiedadesEnAlquiler />} />}
                 />
+             
                 <Route
-                  path="/rentas-cobranza"
-                  element={<ProtectedRoute element={<RentasCobranza />} />}
-                />
-                <Route
-                  path="/rentas-info-extra"
-                  element={<ProtectedRoute element={<RentasInfoExtra />} />}
+                  path="/en-venta"
+                  element={<ProtectedRoute element={<PropiedadesEnVenta />} />}
                 />
               </Routes>
             </div>

@@ -3,7 +3,7 @@ footer {
   color: rgb(255, 222, 253);
   width: 100%;
   padding: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.281);
+  border-top: 1px solid rgba(209, 143, 1, 0.685);
 }
 
 .gridPadreFooter {
@@ -67,12 +67,12 @@ footer {
   display: flex;
   flex-direction: column; // Cambiar a columna para pantallas pequeñas
   font-size: x-small;
-  color: aqua;
+  color: rgb(255, 196, 0);
   align-items: center; // Centra los enlaces en pantallas pequeñas
   gap: 20px; // Espacio entre enlaces
 
 .textoMovimientoFooter{
-  color: aqua;
+  color: rgb(255, 208, 0);
   transition: transform 0.3s ease;
 
   &:hover {

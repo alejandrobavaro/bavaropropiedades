@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../assets/scss/_03-Componentes/_RentasInfoExtra.scss";
-import { BsWhatsapp, BsTwitter, BsFacebook, BsInstagram, BsLinkedin, BsEnvelope } from "react-icons/bs"; // Importar íconos de Bootstrap
+import "../assets/scss/_03-Componentes/_PropiedadesEnVenta.scss";
+import { BsWhatsapp, BsTwitter, BsFacebook, BsInstagram, BsLinkedin, BsEnvelope } from "react-icons/bs"; 
 
-const RentasInfoExtra = () => {
+const PropiedadesEnVenta = () => {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("TODOS");
   const [filterField, setFilterField] = useState("Categoria");
@@ -91,8 +91,8 @@ const RentasInfoExtra = () => {
   };
 
   return (
-    <div className="rentas-info-extra">
-      <div className="filter-buttons">
+    <div className="propiedades-en-venta">
+      <div className="filter-buttons-en-venta">
         <button
           className={selectedCategory === "TODOS" ? "selected" : ""}
           onClick={() => handleCategoryChange("TODOS")}
@@ -134,10 +134,76 @@ const RentasInfoExtra = () => {
       {filteredData.length === 0 ? (
         <h4>No se encontraron datos en la búsqueda. Verifique su selección.</h4>
       ) : (
-        <div className="data-container">
+        <div className="data-container-en-venta">
           {filteredData.map((item) => (
-            <div key={item.id} className="data-item">
+            <div key={item.id} className="data-item-en-venta">
               <h3>{item.Nombre}</h3>
+
+
+
+              {/* Carousel de imágenes */}
+              <div className="image-thumbnails-en-venta">
+                {item["Ver Fotos Propiedad"] &&
+                  item["Ver Fotos Propiedad"].length > 0 && (
+                    <div className="carousel-en-venta">
+                      <button
+                        onClick={() =>
+                          handlePrevImage(
+                            item.id,
+                            item["Ver Fotos Propiedad"].length
+                          )
+                        }
+                      >
+                        &#9664;
+                      </button>
+                      <img
+                        src={
+                          item["Ver Fotos Propiedad"][
+                            currentImageIndex[item.id]
+                          ]
+                        }
+                        alt={`Foto de ${item.Nombre} ${
+                          currentImageIndex[item.id] + 1
+                        }`}
+                        className="thumbnail-en-venta"
+                      />
+                      <button
+                        onClick={() =>
+                          handleNextImage(
+                            item.id,
+                            item["Ver Fotos Propiedad"].length
+                          )
+                        }
+                      >
+                        &#9654;
+                      </button>
+                    </div>
+                  )}
+              </div>
+
+
+              {/* Botones para compartir en redes sociales */}
+              <div className="share-buttons-en-venta">
+    
+                <button onClick={() => shareOnWhatsApp(item)}>
+                  <BsWhatsapp />
+                </button>
+                {/* <button onClick={() => shareOnTwitter(item)}>
+                  <BsTwitter />
+                </button> */}
+                <button onClick={() => shareOnFacebook(item)}>
+                  <BsFacebook />
+                </button>
+                <button onClick={() => shareOnInstagram(item)}>
+                  <BsInstagram />
+                </button>
+                
+                <button onClick={() => shareOnEmail(item)}>
+                  <BsEnvelope />
+                </button>
+              </div>
+
+
               <table>
                 <tbody>
                   <tr>
@@ -228,66 +294,7 @@ const RentasInfoExtra = () => {
                 </tbody>
               </table>
 
-              {/* Carousel de imágenes */}
-              <div className="image-thumbnails">
-                {item["Ver Fotos Propiedad"] &&
-                  item["Ver Fotos Propiedad"].length > 0 && (
-                    <div className="carousel">
-                      <button
-                        onClick={() =>
-                          handlePrevImage(
-                            item.id,
-                            item["Ver Fotos Propiedad"].length
-                          )
-                        }
-                      >
-                        &#9664;
-                      </button>
-                      <img
-                        src={
-                          item["Ver Fotos Propiedad"][
-                            currentImageIndex[item.id]
-                          ]
-                        }
-                        alt={`Foto de ${item.Nombre} ${
-                          currentImageIndex[item.id] + 1
-                        }`}
-                        className="thumbnail"
-                      />
-                      <button
-                        onClick={() =>
-                          handleNextImage(
-                            item.id,
-                            item["Ver Fotos Propiedad"].length
-                          )
-                        }
-                      >
-                        &#9654;
-                      </button>
-                    </div>
-                  )}
-              </div>
 
-              {/* Botones para compartir en redes sociales */}
-              <div className="share-buttons">
-    
-                <button onClick={() => shareOnWhatsApp(item)}>
-                  <BsWhatsapp />
-                </button>
-                {/* <button onClick={() => shareOnTwitter(item)}>
-                  <BsTwitter />
-                </button> */}
-                <button onClick={() => shareOnFacebook(item)}>
-                  <BsFacebook />
-                </button>
-                <button onClick={() => shareOnInstagram(item)}>
-                  <BsInstagram />
-                </button>
-                
-                <button onClick={() => shareOnEmail(item)}>
-                  <BsEnvelope />
-                </button>
-              </div>
             </div>
           ))}
         </div>
@@ -296,4 +303,4 @@ const RentasInfoExtra = () => {
   );
 };
 
-export default RentasInfoExtra;
+export default PropiedadesEnVenta;
