@@ -1,18 +1,11 @@
 .mainContent {
   width: 100%;
-  background-color: #4c1a1a; /* Fondo bordó */
+  background-color: transparent; /* Fondo bordó */
   padding: 0; /* Ajustar el padding para que ocupe toda la pantalla */
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background-color: transparent; 
 
-  .navbar {
-    background-color: #5a2323; /* Otro tono de bordó */
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
+  .ul {
       list-style: none;
       display: flex;
 
@@ -25,14 +18,14 @@
           font-weight: bold;
         }
       }
-    }
+    
 
     .cta-button {
-      background-color: #f9d342;
+      // background-color: #f9d342;
       color: #4c1a1a; /* Texto oscuro */
       padding: 10px 15px;
       border: none;
-      border-radius: 5px;
+      border-radius: 50px;
       cursor: pointer;
       transition: background-color 0.3s;
 
@@ -42,7 +35,8 @@
     }
   }
   .carrusel-container {
-    width: 100vw; // Cambiado a 100vw para ocupar el ancho completo de la ventana
+    width: 100%; // Cambiado a 100vw para ocupar el ancho completo de la ventana
+    width: 100%; // Cambiado a 100vw para ocupar el ancho completo de la ventana
     height: 300px; /* Altura del carrusel reducida */
     overflow: hidden; /* Ocultar el desbordamiento */
     position: relative; /* Para posicionar el logo */
@@ -75,8 +69,9 @@
 
   .services {
     padding: 20px;
-    background-color: #5a2323; /* Fondo de la sección de servicios */
+    background-color: transparent; /* Fondo de la sección de servicios */
     color: #f9d342;
+    border-radius: 50px;
 
     h2 {
       text-align: center;
@@ -90,9 +85,9 @@
     }
 
     .service-item {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 0, 0, 0.336);
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 50px;
       text-align: center;
       transition: transform 0.3s;
 
@@ -104,7 +99,8 @@
 
   .featured-properties {
     padding: 20px;
-    background-color: #4c1a1a; /* Fondo bordó */
+    background-color: #5e410473; /* Fondo bordó */
+    border-radius: 50px;
     color: white;
 
     h2 {
@@ -120,8 +116,8 @@
 
     .property-card {
       background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 10px;
+      padding: 15px; 
+      border-radius: 50px;
       text-align: center;
       transition: transform 0.3s;
 
@@ -143,8 +139,9 @@
 
   .blog {
     padding: 20px;
-    background-color: #5a2323; /* Fondo de la sección de blog */
+    background-color: #04382d88; /* Fondo de la sección de blog */
     color: #f9d342;
+    border-radius: 50px;
 
     h2 {
       text-align: center;
@@ -166,8 +163,9 @@
 
   .subscription-form {
     padding: 20px;
-    background-color: #4c1a1a; /* Fondo bordó */
+    background-color: #4c1a4c67; /* Fondo bordó */
     color: white;
+    border-radius: 50px;
 
     h2 {
       text-align: center;
@@ -203,8 +201,9 @@
 
   .testimonials {
     padding: 20px;
-    background-color: #5a2323; /* Fondo de la sección de testimonios */
+    background-color: #5a232385; /* Fondo de la sección de testimonios */
     color: #f9d342;
+    border-radius: 50px;
 
     h2 {
       text-align: center;
@@ -243,7 +242,7 @@
         margin: 10px 0;
         padding: 10px;
         border-radius: 5px;
-        border: 1px solid #f9d342; /* Borde dorado */
+        border: 1px solid #b89405; /* Borde dorado */
       }
 
       button {

@@ -4,9 +4,9 @@ import "../assets/scss/_03-Componentes/_MainContent.scss";
 
 const MainContent = () => {
   const images = [
-    { src: "../../public/img/05-img-costados-larga/0a.png", alt: "Publicidad 1" },
-    { src: "../../public/img/05-img-costados-larga/2.png", alt: "Publicidad 2" },
-    { src: "../../public/img/05-img-costados-larga/20.png", alt: "Publicidad 3" },
+    { src: "../../img/05-img-costados-larga/0a.png", alt: "Publicidad 1" },
+    { src: "../../img/05-img-costados-larga/2.png", alt: "Publicidad 2" },
+    { src: "../../img/05-img-costados-larga/20.png", alt: "Publicidad 3" },
     // Agrega más imágenes según sea necesario
   ];
 
@@ -34,7 +34,7 @@ const MainContent = () => {
           ))}
         </Slider>
         <div className="logo-container">
-          <img src="../../public/img/02-logos/logobavaropropiedades1.png" alt="Logo" className="logo" />
+          <img src="../../img/02-logos/logobavaropropiedades1.png" alt="Logo" className="logo" />
         </div>
       </div>
 
