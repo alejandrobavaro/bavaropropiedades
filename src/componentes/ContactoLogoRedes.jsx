@@ -15,23 +15,7 @@ const ContactoLogoRedes = () => {
               />
             </a>
 
-            <div className="logo-secondary-container">
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/3.png"
-                />
-              </a>
-
-              <a href="#">
-                <img
-                  alt="icono"
-                  className="logo-img logo-secondary"
-                  src="/img/05-img-costados-larga/4.png"
-                />
-              </a>
-            </div>
+         
           </div>
 
           <div className="contact-icons">
@@ -62,15 +46,7 @@ const ContactoLogoRedes = () => {
                 <i className="bi bi-youtube" /> YouTube
               </a>
             </div>
-            <div className="contact-item">
-              <a
-                href="https://open.spotify.com/artist/7qo7PxAcvyyyZb6XztH7zE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-spotify" /> Spotify
-              </a>
-            </div>
+          
             <div className="contact-item">
               <a
                 href="mailto:bavaroalejandro@gmail.com"
@@ -80,24 +56,7 @@ const ContactoLogoRedes = () => {
                 <i className="bi bi-envelope" /> Escríbenos un mail
               </a>
             </div>
-            <div className="contact-item">
-              <a
-                href="https://www.paypal.com/paypalme/alegondramusic?country.x=AR&locale.x=es_XC"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-paypal" /> Colaborá con nosotros
-              </a>
-            </div>
-            <div className="contact-item">
-              <a
-                href="https://www.youtube.com/watch?v=c6fE_Y4ol98"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-play-circle" /> Ver videos
-              </a>
-            </div>
+          
           </div>
         </div>
       </div>

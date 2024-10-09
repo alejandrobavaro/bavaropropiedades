@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -53,8 +53,6 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-
-
   return (
     <AuthProvider>
       <HeaderNotificationsProvider>
@@ -70,34 +68,31 @@ function App() {
                 <Route path="/logout" element={<SesionLogout />} />
                 <Route path="/" element={<MainContent />} />
 
-                <Route
-                  path="/contacto"
-                  element={
-                    <ProtectedRoute
-                      element={
-                        <>
-                          <ContactoLogoRedes />
-                          <ContactoFormularioSlider />
-                        </>
-                      }
-                    />
-                  }
-                />
+                {/* Rutas abiertas para visualizar propiedades */}
+                <Route path="/en-alquiler" element={<PropiedadesEnAlquiler />} />
+                <Route path="/en-venta" element={<PropiedadesEnVenta />} />
+
              
-                <Route
-                  path="/ayuda"
-                  element={<ProtectedRoute element={<ConsultasAyuda />} />}
+             
+             <Route
+                  path="/contacto"
+                element={    <ContactoLogoRedes />} 
+                
                 />
 
                 <Route
-                  path="/en-alquiler"
-                  element={<ProtectedRoute element={<PropiedadesEnAlquiler />} />}
+                  path="/ayuda"
+                element={   <ContactoFormularioSlider />} 
+                
                 />
-             
-                <Route
-                  path="/en-venta"
-                  element={<ProtectedRoute element={<PropiedadesEnVenta />} />}
-                />
+
+
+
+{/* <Route
+                  path="/ayuda"
+                  element={<ProtectedRoute element={<ConsultasAyuda />} />}
+                /> */}
+
               </Routes>
             </div>
           </div>

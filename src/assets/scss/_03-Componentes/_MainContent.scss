@@ -1,39 +1,264 @@
-//---------contenedor principal--------------------//
 .mainContent {
   width: 100%;
   background-color: #4c1a1a; /* Fondo bordó */
-  padding: 20px;
+  padding: 0; /* Ajustar el padding para que ocupe toda la pantalla */
   border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
-}
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 
-//---------contenedor principal de los elementos--------------------//
-.mainContentContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 30px; /* Espacio entre elementos */
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #330d0d; /* Fondo bordó más oscuro */
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
+  .navbar {
+    background-color: #5a2323; /* Otro tono de bordó */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-//---------items del grid--------------------//
-.gridItem {
-  background-color: #5a2323; /* Otro tono de bordó */
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    ul {
+      list-style: none;
+      display: flex;
 
-  h2 {
-    color: #f9d342; /* Color dorado */
-    margin-bottom: 15px;
-    font-size: 24px;
-    font-weight: bold;
+      li {
+        margin: 0 15px;
+
+        a {
+          color: #f9d342; /* Color dorado */
+          text-decoration: none;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .cta-button {
+      background-color: #f9d342;
+      color: #4c1a1a; /* Texto oscuro */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #e0c32c; /* Color al pasar el mouse */
+      }
+    }
+  }
+  .carrusel-container {
+    width: 100vw; // Cambiado a 100vw para ocupar el ancho completo de la ventana
+    height: 300px; /* Altura del carrusel reducida */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    position: relative; /* Para posicionar el logo */
+  
+    .carrusel-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Ocupa toda la altura */
+    }
+  
+    .carrusel-image {
+      width: 100%; // Cambiado a 100% para que ocupe todo el ancho
+      height: auto; // Mantiene la proporción de la imagen
+      border-radius: 20px; /* Bordes redondeados */
+    }
+  
+    .logo-container {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+  
+      .logo {
+        width: auto; /* Ajustar el tamaño del logo */
+        border-radius: 10px; /* Bordes redondeados */
+      }
+    }
+  }
+  
+
+  .services {
+    padding: 20px;
+    background-color: #5a2323; /* Fondo de la sección de servicios */
+    color: #f9d342;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .featured-properties {
+    padding: 20px;
+    background-color: #4c1a1a; /* Fondo bordó */
+    color: white;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .property-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .price {
+        font-weight: bold;
+        color: #f9d342; /* Color dorado para el precio */
+      }
+    }
+  }
+
+  .blog {
+    padding: 20px;
+    background-color: #5a2323; /* Fondo de la sección de blog */
+    color: #f9d342;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    article {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #f9d342; /* Borde dorado */
+      border-radius: 10px;
+    }
+
+    .read-more {
+      color: #f9d342;
+      text-decoration: underline;
+    }
+  }
+
+  .subscription-form {
+    padding: 20px;
+    background-color: #4c1a1a; /* Fondo bordó */
+    color: white;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+
+      input {
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid #f9d342; /* Borde dorado */
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f9d342; /* Color dorado */
+        color: #4c1a1a; /* Texto oscuro */
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #e0c32c; /* Color al pasar el mouse */
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    padding: 20px;
+    background-color: #5a2323; /* Fondo de la sección de testimonios */
+    color: #f9d342;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+      padding: 10px;
+      border-left: 5px solid #f9d342; /* Borde dorado a la izquierda */
+      color: #f9d342; /* Color dorado */
+    }
+  }
+
+  .contact-form {
+    padding: 20px;
+    background-color: #4c1a1a; /* Fondo bordó */
+    color: white;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input,
+      textarea {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #f9d342; /* Borde dorado */
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f9d342; /* Color dorado */
+        color: #4c1a1a; /* Texto oscuro */
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #e0c32c; /* Color al pasar el mouse */
+        }
+      }
+    }
   }
 }

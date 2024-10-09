@@ -1,3 +1,7 @@
+$gold-color: #FFD700;  // Color dorado
+$light-gold-color: #FFECB3;  // Un tono más claro de dorado
+
+
 //---------Header Container--------------------//
 
 .header {
@@ -5,29 +9,29 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 20px; // Ajusta el padding para mayor espacio
+  padding: 10px 20px;
   font-size: small;
-  border-bottom: 2px solid #a76c00b6;
+  background-color: #8a120396;
   border-radius: 30px;
-  box-sizing: border-box; // Asegura que el padding no afecte el ancho total
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px; // Ajusta el padding en móviles
+    padding: 10px;
   }
 }
 
 //---------Logo Header--------------------//
 
 .logoHeader {
-  max-width: 150px; // Ajusta el tamaño máximo del logo
-  height: auto; // Mantiene la proporción del logo
+  max-width: 210px;
+  height: auto;
   transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
-    max-width: 100px; // Tamaño del logo en pantallas pequeñas
+    max-width: 100px;
   }
 
   &:hover {
@@ -35,50 +39,54 @@
   }
 }
 
-//---------Date Container--------------------//
+//---------Navbar Header--------------------//
 
-.date-container {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
   display: flex;
   align-items: center;
-  margin: 0;
-  font-size: x-small;
-  color: white;
-  white-space: nowrap; // Evita el salto de línea dentro del contenedor
-  text-align: center;
+  font-size: small;
+  gap: 38px;
+
+  @media (max-width: 768px) {
+    gap: 3px;
+  }
 }
 
-.date-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; // Centra el contenido horizontalmente
-  gap: 5px; // Espacio entre filas
+.nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #ffffff;
+
+  &.selected {
+    background-color: #ffd900;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  &:hover {
+    color: #ffd900;
+  }
 }
 
-.time-row, .weekday-row, .date-row {
-  display: block; // Asegura que cada fila esté en una línea separada
-}
+// Estilo para el enlace activo
+.nav-link.active {
+  color: #ffffff; // Color original cuando está activo
+  background-color: transparent; // Evita que cambie el fondo
 
-.current-time {
-  font-size: x-small;
-  color: #ffd900;
+  
 }
-
-.dia{
-  color:  #ffd900;
-}
-
-.numeroFecha {
-  font-size: xx-small;
-  text-transform: uppercase;
-  color: #ffd900;
-}
-
 
 //---------Auth Buttons--------------------//
 
 .auth-icon {
   font-size: x-large;
-  color:  #ffd900;
+  color: #ffd900;
   transition: color 0.3s ease;
   margin: 0;
 
@@ -94,9 +102,8 @@
   color: #ffffff;
   margin-bottom: 5px;
 
-
   span {
-    margin-right: 5px; // Espacio entre "Hola" y el nombre de usuario
+    margin-right: 5px;
   }
 
   @media (max-width: 768px) {
@@ -110,187 +117,17 @@
   }
 }
 
-
-
-
-//-------------------------//
-.iconoCalculadora{
-  color: rgba(255, 255, 255, 0.692);
-  font-size: x-large;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #ffd900;
-  }
-}
-
-.iconoTemporizador {
-  color: rgba(255, 255, 255, 0.692);
-  font-size: x-large;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #ffd900;
-  }
-}
-
-
-
-//---------Navbar Header--------------------//
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
-// Estilos para .navbar-nav
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  font-size: small;
-  gap: 38px; // Gap por defecto para pantallas grandes
-
-  // Media queries para dispositivos móviles y tablets
-  @media (max-width: 768px) {
-    gap: 3px; // Gap para pantallas de tablet y móviles
-  }
-}
-
-
-.navbarHeader {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.navbar-navHeader {
-  display: flex;
-  align-items: center;
-  font-size: small;
-  gap: 30px;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-//---------home y BOTONES--------------------//
-
-.nav-linkHeader.home-link {
-  text-align: center;
-  color: #bbffe9;
-  text-decoration: none;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-.textoMenu1 {
-  font-size: small;
-  color: #c8fcffe9;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-// Estilos generales para los enlaces de navegación
-.nav-link {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: #ffffff; // Color del texto de los enlaces
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-// Estilos específicos para el botón HOME
-.home-link {
-  color: #1abc9c; // Color turquesa
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-// Estilos específicos para el botón NOTAS
-.notas-link {
-  color: #1abc9c; // Color turquesa
-  font-size: small;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-// Estilos específicos para el botón CONTACTO
-.contacto-link {
-
-}
-
-// Estilos específicos para el botón TAREAS EN PROCESO
-.tareas-link {
-  color: #ffd900;
-  font-size: small;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-//---------Contacto--------------------//
-
-.nav-linkHeader {
-  text-align: center;
-  color: #bbffe9;
-  text-decoration: none;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-.textoMenuTareas {
-  color: #d5dfff;
-
-  &:hover {
-    color:  #ffd900;
-  }
-}
-
-.textoMenu {
-  color: #ffffff;
-
-  &:hover {
-    color: #ffd900;
-  }
-}
-
-.textoMenu2 {
-  font-size: small;
-  color: #ffffff;
-}
-
 //---------Navbar Toggler (Hamburguesa)--------------------//
+
 .navbar-togglerHeader {
   border: none;
   background-color: white;
   color: white;
   font-size: xx-large;
   cursor: pointer;
-  
-  
 
   @media (min-width: 769px) {
     display: none;
-    
   }
 
   @media (max-width: 768px) {
@@ -302,7 +139,6 @@
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
-  
 
   @media (min-width: 769px) {
     display: none;
@@ -313,7 +149,6 @@
 
 .menuCompleto {
   display: none;
-  
 
   @media (max-width: 768px) {
     position: absolute;
@@ -322,37 +157,10 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    display: flex;
-  }
-
-  &.open {
-    display: flex;
-    
-  }
-}
-
-.mobile-menu {
-  display: none;
-
-  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    text-align: center;
-    
-  }
-
-  &.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
   }
 }
 
@@ -383,49 +191,14 @@
 }
 
 
+.icon-contact {
+  font-size: 1.5rem;  // Ajusta el tamaño del icono
+  color: $gold-color;  // Color dorado o el que desees (asegúrate de tener la variable $gold-color definida en tus variables)
+  margin-right: 0.5rem;  // Espacio a la derecha del ícono
+  transition: transform 0.3s ease, color 0.3s ease;  // Animación suave
 
-//---------Elementos de NavBar--------------------//
-
-.navbar-togglerHeader {
-  border: none;
-  background-color: white;
-  color: white;
-  cursor: pointer;
-  
-
-  @media (min-width: 769px) {
-    display: none;
+  &:hover {
+    color: $light-gold-color;  // Cambia de color al hacer hover
+    transform: scale(1.2);  // Aumenta el tamaño en hover
   }
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-}
-
-.menu-icon {
-  color: #fff;
-  font-size: xx-large;
-  cursor: pointer;
-  
-
-  @media (min-width: 769px) {
-    display: none;
-  }
-}
-
-// Estilos para el botón de modo claro/oscuro
-.dark-mode-toggle {
-  padding: 0;
-  margin: 0;
-
-
-  // Mostrar solo en pantallas grandes
-  @media (max-width: 768px) {
-    display: none; // Oculta en tabletas y móviles
-  }
-}
-
-
-.dark-mode-toggle {
-  font-size: large;
 }

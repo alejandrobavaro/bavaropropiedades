@@ -1,6 +1,6 @@
 // Variables de colores
-$background-color: #000000ad; // Bordó
-$gold-color: #ffd700; // Dorado
+$background-color: #000000b2; // Bordó
+$gold-color: #ffa6007a; // Dorado
 $white-color: #ffffff;
 $border-radius: 10px;
 
@@ -9,6 +9,7 @@ $border-radius: 10px;
 .contact-logo-redes-wrapper {
   background-color: $background-color; // Fondo bordó
   padding: 20px;
+  border: 1px solid $gold-color;
   border-radius: $border-radius;
 }
 
@@ -20,8 +21,7 @@ $border-radius: 10px;
   max-width: 1050px;
   margin: 0 auto;
   padding: 10px;
-  border-bottom: 2px solid $gold-color;
-  border-radius: $border-radius;
+ 
 }
 
 //---------logo container--------------------//

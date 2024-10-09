@@ -1,0 +1,130 @@
+// src/assets/scss/_03-Componentes/_PropiedadCard.scss
+
+.data-item {
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 40px rgba(255, 187, 0, 0.788);
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  width: 100%;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+
+  h3 {
+       color: #ffffff;
+    margin-bottom: 5px;
+    border: 1px solid #ffffff4b;
+    border-radius: 10%;
+
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  
+    td {
+      padding: 5px 8px;
+      border: 1px solid #584917;
+      color: #fff;
+
+      &:first-child {
+        color: #ffbb00;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .titulo-propiedad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b0d0181;
+    font-size: large;
+     color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 10px;
+
+  }
+
+
+  .image-thumbnails-en-alquiler {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding:10px;
+    margin-top: 5px;
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+        padding:  5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #fffb00;
+        }
+      }
+
+      .thumbnail {
+        width: 100%; // Ajusta la imagen al ancho máximo del contenedor
+        height: 350px; // Permite que la altura se ajuste automáticamente
+        object-fit: cover; // Mantiene la relación de aspecto
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      
+      }
+    }
+  }
+}
+
+//----------------------------BOTONES COMPARTIR----------//
+
+.share-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  
+
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffd392;
+    font-size: x-large;
+
+    &:hover {
+      color: #ffd398;
+    }
+
+    h6 {
+      margin-top: 5px;
+      font-size: large;
+      color: #ffffff;
+    }
+
+    // Añadir estilos para iconos si se utilizan
+    .icon {
+      font-size: 30px; // Tamaño del icono
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffffff; // Color en hover
+      }
+    }
+  }
+}

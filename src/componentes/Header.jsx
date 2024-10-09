@@ -4,11 +4,8 @@ import { useAuth } from "./SesionAuthContext";
 import HeaderDolarApi from "./HeaderDolarApi";
 import HeaderNotificaciones from "./HeaderNotificaciones";
 import { useHeaderNotifications } from "./HeaderNotificacionesContext";
-import {
-  BsFillPersonPlusFill,
-  BsBoxArrowRight,
-  BsList,
-} from "react-icons/bs";
+import { BsFillPersonPlusFill, BsBoxArrowRight, BsList, BsTelephone } from "react-icons/bs";
+import { AiOutlineMail } from 'react-icons/ai'; // Importa el icono de correo
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../assets/scss/_03-Componentes/_Header.scss";
 
@@ -17,6 +14,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   const { notifications } = useHeaderNotifications();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [activeLink, setActiveLink] = useState(null); // Para gestionar el botón seleccionado
 
   useEffect(() => {
     document.body.classList.toggle("dark-mode", isDarkMode);
@@ -30,6 +28,11 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   }, []);
 
   const handleToggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+    setIsMobileMenuOpen(false); // Cierra el menú móvil después de hacer clic
+  };
 
   const getFormattedDate = () => {
     const today = new Date();
@@ -50,13 +53,9 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
     <header className="header">
       <Navbar expand="lg" className="navbar">
         <Container>
-          <Navbar.Brand as={Link} to="/" className="logo-container">
-            <img
-              src="/img/02-logos/logobavaropropiedades3.png"
-              alt="Logo"
-              className="logoHeader"
-            />
-          </Navbar.Brand>
+          <Nav.Item>
+            <HeaderDolarApi />
+          </Nav.Item>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <BsList className="menu-icon" onClick={handleToggleMobileMenu} />
@@ -67,54 +66,13 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
           >
             <Nav className="mr-auto">
               <Nav.Link
-                className="nav-link home-link"
+                className={`nav-link home-link ${activeLink === "home" ? "active" : ""}`}
                 as={Link}
                 to="/"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleLinkClick("home")}
               >
                 HOME
               </Nav.Link>
-
-              <Nav.Link
-                className="nav-link contacto-link"
-                as={Link}
-                to="/contacto"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                CONTACTO
-              </Nav.Link>
-
-              <Nav.Link
-                className="nav-link"
-                as={Link}
-                to="/en-alquiler"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-               ALQUILER
-              </Nav.Link>
-           
-              <Nav.Link
-                className="nav-link"
-                as={Link}
-                to="/en-venta"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                VENTA
-              </Nav.Link>
-              <Nav.Link
-                className="nav-link"
-                as={Link}
-                to="/ayuda"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Ayuda
-              </Nav.Link>
-            </Nav>
-
-            <Nav className="">
-              <Nav.Item>
-                <HeaderDolarApi />
-              </Nav.Item>
 
               <Nav.Item className="notifications-item">
                 <Link to="/calendario-pagos">
@@ -122,33 +80,63 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                 </Link>
               </Nav.Item>
 
-              <Nav.Item className="date-container">
-                <div className="date-text">
-                  <div className="time-row">
-                    <span>
-                      Son las{""}
-                      <span className="current-time">
-                        {currentTime.toLocaleTimeString()}
-                      </span>
-                    </span>
-                  </div>
-                  <div className="weekday-row">
-                    <span>
-                      {""}
-                      del día <span className="dia">{weekday},</span>
-                    </span>
-                  </div>
-                  <div className="date-row">
-                    <span className="numeroFecha">{dayMonthYear}</span>
-                  </div>
-                </div>
-              </Nav.Item>
+          
+
+
+              <Nav.Link
+                className={`nav-link ${activeLink === "alquiler" ? "active" : ""}`}
+                as={Link}
+                to="/en-alquiler"
+                onClick={() => handleLinkClick("alquiler")}
+              >
+                ALQUILER
+              </Nav.Link>
+
+              <Navbar.Brand as={Link} to="/" className="logo-container">
+                <img
+                  src="/img/02-logos/logobavaropropiedades3.png"
+                  alt="Logo"
+                  className="logoHeader"
+                />
+              </Navbar.Brand>
+
+          
+
+              <Nav.Link
+                className={`nav-link ${activeLink === "venta" ? "active" : ""}`}
+                as={Link}
+                to="/en-venta"
+                onClick={() => handleLinkClick("venta")}
+              >
+                VENTA
+              </Nav.Link>
+
+              <Nav.Link
+  className={`nav-link contacto-link ${activeLink === "contacto" ? "active" : ""}`}
+  as={Link}
+  to="/contacto"
+  onClick={() => handleLinkClick("contacto")}
+>
+  <AiOutlineMail className="icon-contact" /> {/* Aplica una clase personalizada */}
+</Nav.Link>
+
+
+              <Nav.Link
+                className={`nav-link ${activeLink === "consultas" ? "active" : ""}`}
+                as={Link}
+                to="/ayuda"
+                onClick={() => handleLinkClick("consultas")}
+              >
+                CONSULTAS
+              </Nav.Link>
+
+              
 
               <Nav.Item className="auth-buttons-container">
                 {state.isAuthenticated ? (
                   <div className="auth-welcome-container">
                     <div className="auth-welcome">
-                      <span>Hola,</span>{""}
+                      <span>Hola,</span>
                       <span>{state.user.email.split("@")[0]}</span>
                     </div>
                     <Link
