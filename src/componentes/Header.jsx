@@ -4,8 +4,13 @@ import { useAuth } from "./SesionAuthContext";
 import HeaderDolarApi from "./HeaderDolarApi";
 import HeaderNotificaciones from "./HeaderNotificaciones";
 import { useHeaderNotifications } from "./HeaderNotificacionesContext";
-import { BsFillPersonPlusFill, BsBoxArrowRight, BsList, BsTelephone } from "react-icons/bs";
-import { AiOutlineMail } from 'react-icons/ai'; // Importa el icono de correo
+import {
+  BsFillPersonPlusFill,
+  BsBoxArrowRight,
+  BsList,
+  BsTelephone,
+} from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai"; // Importa el icono de correo
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../assets/scss/_03-Componentes/_Header.scss";
 
@@ -66,7 +71,9 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
           >
             <Nav className="mr-auto">
               <Nav.Link
-                className={`nav-link home-link ${activeLink === "home" ? "active" : ""}`}
+                className={`nav-link home-link ${
+                  activeLink === "home" ? "active" : ""
+                }`}
                 as={Link}
                 to="/"
                 onClick={() => handleLinkClick("home")}
@@ -80,11 +87,10 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                 </Link>
               </Nav.Item>
 
-          
-
-
               <Nav.Link
-                className={`nav-link ${activeLink === "alquiler" ? "active" : ""}`}
+                className={`nav-link ${
+                  activeLink === "alquiler" ? "active" : ""
+                }`}
                 as={Link}
                 to="/en-alquiler"
                 onClick={() => handleLinkClick("alquiler")}
@@ -100,8 +106,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                 />
               </Navbar.Brand>
 
-          
-
               <Nav.Link
                 className={`nav-link ${activeLink === "venta" ? "active" : ""}`}
                 as={Link}
@@ -112,25 +116,27 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
               </Nav.Link>
 
               <Nav.Link
-  className={`nav-link contacto-link ${activeLink === "contacto" ? "active" : ""}`}
-  as={Link}
-  to="/contacto"
-  onClick={() => handleLinkClick("contacto")}
->
-  <AiOutlineMail className="icon-contact" /> {/* Aplica una clase personalizada */}
-</Nav.Link>
-
+                className={`nav-link contacto-link ${
+                  activeLink === "contacto" ? "active" : ""
+                }`}
+                as={Link}
+                to="/contacto"
+                onClick={() => handleLinkClick("contacto")}
+              >
+                <AiOutlineMail className="icon-contact" />{" "}
+                {/* Aplica una clase personalizada */}
+              </Nav.Link>
 
               <Nav.Link
-                className={`nav-link ${activeLink === "consultas" ? "active" : ""}`}
+                className={`nav-link ${
+                  activeLink === "consultas" ? "active" : ""
+                }`}
                 as={Link}
                 to="/ayuda"
                 onClick={() => handleLinkClick("consultas")}
               >
                 CONSULTAS
               </Nav.Link>
-
-              
 
               <Nav.Item className="auth-buttons-container">
                 {state.isAuthenticated ? (
