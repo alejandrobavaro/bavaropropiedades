@@ -5,32 +5,32 @@ import MainWhatsappIcon from "./MainWhatsappIcon";
 
 const MainContent = () => {
   const images = [
-    { src: "../../img/05-img-costados-larga/0a.png", alt: "Publicidad 1" },
-    { src: "../../img/05-img-costados-larga/2.png", alt: "Publicidad 2" },
-    { src: "../../img/05-img-costados-larga/20.png", alt: "Publicidad 3" },
+    { src: "/img/05-img-costados-larga/Designer (28).jpeg", alt: "Publicidad 1" },
+    { src: "/img/05-img-costados-larga/Designer (29).jpeg", alt: "Publicidad 2" },
+    { src: "/img/05-img-costados-larga/Designer (31).jpeg", alt: "Publicidad 3" },
   ];
 
   const properties = [
     {
-      src: "../../public/fotos-propiedades/ejemplo1.jpg",
+      src: "/img/05-img-costados-larga/Designer (16).jpeg",
       title: "Casa Moderna en Zona Exclusiva",
       description: "Amplia casa de 4 dormitorios con jardín privado.",
       price: "$350,000",
     },
     {
-      src: "../../public/fotos-propiedades/ejemplo2.jpg",
+      src: "/img/05-img-costados-larga/Designer (11).jpeg",
       title: "Apartamento con Vista al Mar",
       description: "Increíble apartamento con balcón frente al mar.",
       price: "$450,000",
     },
     {
-      src: "../../public/fotos-propiedades/ejemplo3.jpg",
+      src: "/img/05-img-costados-larga/Designer (20).jpeg",
       title: "Loft Urbano en el Centro",
       description: "Estilo moderno en el corazón de la ciudad.",
       price: "$250,000",
     },
     {
-      src: "../../public/fotos-propiedades/ejemplo4.jpg",
+      src: "/img/05-img-costados-larga/Designer (24).jpeg",
       title: "Villa de Lujo en la Costa",
       description: "Villa exclusiva con piscina privada y jardín tropical.",
       price: "$1,200,000",
@@ -87,7 +87,7 @@ const MainContent = () => {
         <h2>Nuestros Servicios</h2>
         <div className="service-list">
           <div className="service-item">
-            <img src="../../img/servicios/asesoria.jpg" alt="Asesoría" className="service-image" />
+            <img src="/img/05-img-costados-larga/Designer (1).jpeg" alt="Asesoría" className="service-image" />
             <h3>Asesoría en Compras: Decisiones Inteligentes en un Contexto Volátil</h3>
             <p>
               Comprar una propiedad en Argentina en 2024 es un desafío, y por eso estamos aquí para acompañarte en cada paso. Con un mercado influenciado por la fluctuación del dólar y cambios en las políticas económicas, nuestra asesoría va más allá del simple acompañamiento: te brindamos análisis personalizados del contexto macroeconómico, ayudándote a entender el valor real de tu inversión. 
@@ -95,7 +95,7 @@ const MainContent = () => {
             <button className="cta-button">Consultar Ahora</button>
           </div>
           <div className="service-item">
-            <img src="../../img/servicios/administracion.jpg" alt="Administración" className="service-image" />
+            <img src="/img/05-img-costados-larga/Designer (16).jpeg" alt="Administración" className="service-image" />
             <h3>Administración de Propiedades: Mantén el Valor de tus Bienes</h3>
             <p>
               Administrar una propiedad puede ser un desafío, especialmente en un entorno donde la inflación y los impuestos locales cambian rápidamente. En Bavaro Propiedades, no solo gestionamos tu inmueble, también te ofrecemos estrategias fiscales y optimización de rentabilidad.
@@ -103,7 +103,7 @@ const MainContent = () => {
             <button className="cta-button">Más Información</button>
           </div>
           <div className="service-item">
-            <img src="../../img/servicios/ventas-rapidas.jpg" alt="Ventas" className="service-image" />
+            <img src="/img/05-img-costados-larga/Designer (17).jpeg" alt="Ventas" className="service-image" />
             <h3>Ventas Rápidas: Cómo Maximizar el Valor de tu Propiedad</h3>
             <p>
               En un mercado inmobiliario tan dinámico como el argentino, vender rápido no siempre significa vender barato. Con nuestro equipo, te ofrecemos un análisis comparativo de mercado (CMA) que estudia en profundidad la demanda actual, asegurando que tu propiedad sea vendida al mejor precio posible.
@@ -111,7 +111,7 @@ const MainContent = () => {
             <button className="cta-button">Vender Mi Propiedad</button>
           </div>
           <div className="service-item">
-            <img src="../../img/servicios/inversiones.jpg" alt="Inversiones" className="service-image" />
+            <img src="/img/05-img-costados-larga/Designer (4).jpeg" alt="Inversiones" className="service-image" />
             <h3>Inversiones Seguras: Protege tu Dinero en Tiempos de Incertidumbre</h3>
             <p>
               La compra de inmuebles sigue siendo una de las mejores formas de resguardar el capital en Argentina, sobre todo en un contexto inflacionario y de constante devaluación del peso. Te asesoramos para encontrar propiedades con alta potencialidad de revalorización.
@@ -142,7 +142,7 @@ const MainContent = () => {
         <h2>Últimas Noticias</h2>
         <div className="blog-grid">
           <article className="blog-post">
-            <img src="../../img/blog/inversiones.jpg" alt="Invertir en 2024" className="blog-image" />
+            <img src="/img/05-img-costados-larga/Designer (8).jpeg" alt="Invertir en 2024" className="blog-image" />
             <h3>Invertir en Propiedades en 2024: Consejos para Navegar la Economía Argentina</h3>
             <p>
               El mercado inmobiliario argentino sigue siendo uno de los más atractivos para inversores locales e internacionales, pero la inestabilidad económica plantea desafíos. En 2024, con un dólar en constante ascenso y políticas económicas fluctuantes, ¿cómo puede un inversor resguardar su capital y obtener ganancias a largo plazo?
@@ -150,7 +150,7 @@ const MainContent = () => {
             <button className="cta-button">Leer Más</button>
           </article>
           <article className="blog-post">
-            <img src="../../img/blog/venta.jpg" alt="Preparar tu propiedad" className="blog-image" />
+            <img src="/img/05-img-costados-larga/Designer (6).jpeg" alt="Preparar tu propiedad" className="blog-image" />
             <h3>¿Cómo Preparar tu Propiedad para la Venta en un Mercado Competitivo?</h3>
             <p>
               Si estás pensando en vender tu propiedad, es crucial que tomes las medidas necesarias para maximizar su valor. La preparación adecuada puede marcar la diferencia entre una venta rápida y una propiedad que permanece en el mercado por meses.
@@ -221,7 +221,7 @@ const MainContent = () => {
       <div className="botonContactaAgente">
       <button className="cta-button">
         <img
-          src="../../img/agente-ejemplo.jpg" // Aquí va la imagen del agente, reemplazable
+          src="/img/05-img-costados-larga/Telefonista3.jpeg" // Aquí va la imagen del agente, reemplazable
           alt="Agente"
           className="agent-image"
         />
